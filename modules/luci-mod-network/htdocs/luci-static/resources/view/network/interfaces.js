@@ -893,14 +893,12 @@ return view.extend({
 
 					so = ss.taboption('ipv6-ra', form.Value, 'max_preferred_lifetime', _('Max preferred lifetime'));
 					so.optional = true;
-					so.datatype = 'range(0, 2700)';
 					so.placeholder = '2700';
 					so.depends('ra', 'server');
 					so.depends({ ra: 'hybrid', master: '0' });
 
 					so = ss.taboption('ipv6-ra', form.Value, 'max_valid_lifetime', _('Max valid lifetime'));
 					so.optional = true;
-					so.datatype = 'range(0, 5400)';
 					so.placeholder = '5400';
 					so.depends('ra', 'server');
 					so.depends({ ra: 'hybrid', master: '0' });
